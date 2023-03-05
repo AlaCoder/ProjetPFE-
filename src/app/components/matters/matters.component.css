@@ -1,0 +1,13 @@
+.card-body{
+    display: flex;
+    background-color: #ffffff;
+    width: 43lh;
+    flex-wrap: wrap;
+    flex-direction: column;
+
+    
+}
+.form{
+    background-color: white;
+}
+

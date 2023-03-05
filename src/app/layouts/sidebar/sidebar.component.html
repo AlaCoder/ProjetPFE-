@@ -1,0 +1,75 @@
+<aside id="sidebar" class="sidebar">
+    <ul class="sidebar-nav" id="sidebar-nav">
+       <li class="nav-item"> <a class="nav-link " routerLink="/dashboard"> <i class="bi bi-speedometer" style="font-size:18px"></i><span>Dashboard</span> </a></li>
+       <li class="nav-item">
+          <a class="nav-link collapsed" data-bs-target="#components-nav" data-bs-toggle="collapse" href="#"> <i class="bi bi-calendar3"></i><span>TIMESHEETS</span><i class="bi bi-chevron-down ms-auto"></i> </a>
+          <ul id="components-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
+             <li> <a routerLink="/timesheets"> <i class="bi bi-circle"></i><span>Alerts</span> </a></li>
+             <li> <a routerLink=""> <i class="bi bi-circle"></i><span>Accordion</span> </a></li>
+            
+          </ul>
+       </li>
+       <li class="nav-item">
+          <a class="nav-link collapsed" data-bs-target="#forms-nav" data-bs-toggle="collapse" href="#"> <i class="bi bi-check-square-fill"></i><span>VALIDATION</span><i class="bi bi-chevron-down ms-auto"></i> </a>
+          <ul id="forms-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
+             <li> <a routerLink="/validation"> <i class="bi bi-circle"></i><span>Form Elements</span> </a></li>
+             <li> <a routerLink="/"> <i class="bi bi-circle"></i><span>Form Layouts</span> </a></li>
+             
+          </ul>
+       </li>
+       <li class="nav-item">
+          <a class="nav-link collapsed" data-bs-target="#tables-nav" data-bs-toggle="collapse" href="#"><i class="bi bi-briefcase" style="font-size:18px"></i><span>MATTERS</span><i class="bi bi-chevron-down ms-auto"></i> </a>
+          <ul id="tables-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
+             <li> <a routerLink="/matters"> <i class="bi bi-circle"></i><span>General Tables</span> </a></li>
+             <li> <a routerLink=""> <i class="bi bi-circle"></i><span>Data Tables</span> </a></li>
+          </ul>
+       </li>
+       <li class="nav-item">
+          <a class="nav-link collapsed" data-bs-target="#charts-nav" data-bs-toggle="collapse" href="#"><i class="bi bi-search" style="font-size:18px"></i> <span>CLIENTS</span><i class="bi bi-chevron-down ms-auto"></i> </a>
+          <ul id="charts-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
+             <li> <a routerLink="/clients"> <i class="bi bi-circle"></i><span>Chart.js</span> </a></li>
+             <li> <a routerLink=""> <i class="bi bi-circle"></i><span>ApexCharts</span> </a></li>
+          </ul>
+       </li>
+       <li class="nav-item">
+          <a class="nav-link collapsed" data-bs-target="#icons-nav" data-bs-toggle="collapse" href="#"> <i class="bi bi-cart-plus-fill" style="font-size:18px"></i><span>FRAIS</span><i class="bi bi-chevron-down ms-auto"></i> </a>
+          <ul id="icons-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
+             <li> <a routerLink="/frais"> <i class="bi bi-circle"></i><span>Bootstrap Icons</span> </a></li>
+             <li> <a routerLink=""> <i class="bi bi-circle"></i><span>Remix Icons</span> </a></li>
+            
+          </ul>
+       </li>
+       <li class="nav-item">
+        <a class="nav-link collapsed" data-bs-target="#fact-nav" data-bs-toggle="collapse" href="#"> <i class="bi bi-cash-stack" style="font-size:18px" ></i><span>FACTURATION</span><i class="bi bi-chevron-down ms-auto"></i> </a>
+        <ul id="fact-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
+           <li> <a routerLink="/facturation"> <i class="bi bi-circle"></i><span>Bootstrap Icons</span> </a></li>
+           <li> <a routerLink=""> <i class="bi bi-circle"></i><span>Remix Icons</span> </a></li>
+          
+        </ul>
+     </li>
+     <li class="nav-item">
+        <a class="nav-link collapsed" data-bs-target="#report-nav" data-bs-toggle="collapse" href="#"> <i class="bi bi-graph-down" style="font-size:18px" ></i><span>REPORTING</span><i class="bi bi-chevron-down ms-auto"></i> </a>
+        <ul id="report-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
+           <li> <a routerLink="/reporting"> <i class="bi bi-circle"></i><span>Bootstrap Icons</span> </a></li>
+           <li> <a routerLink=""> <i class="bi bi-circle"></i><span>Remix Icons</span> </a></li>
+          
+        </ul>
+     </li>
+     <li class="nav-item">
+        <a class="nav-link collapsed" data-bs-target="#admin-nav" data-bs-toggle="collapse" href="#"><i class="bi bi-person" style="font-size:19px" ></i><span>ADMINISTRATION</span><i class="bi bi-chevron-down ms-auto"></i> </a>
+        <ul id="admin-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
+           <li> <a routerLink="/"> <i class="bi bi-circle"></i><span>Bootstrap Icons</span> </a></li>
+           <li> <a routerLink=""> <i class="bi bi-circle"></i><span>Remix Icons</span> </a></li>
+          
+        </ul>
+     </li>
+       <li class="nav-heading">Pages</li>
+       <li class="nav-item"> <a class="nav-link collapsed" routerLink="/profil"> <i class="bi bi-person"></i> <span>Profile</span> </a></li>
+       <li class="nav-item"> <a class="nav-link collapsed" routerLink="/pages-faq"> <i class="bi bi-question-circle"></i> <span>F.A.Q</span> </a></li>
+       <li class="nav-item"> <a class="nav-link collapsed" routerLink="/pages-contact"> <i class="bi bi-envelope"></i> <span>Contact</span> </a></li>
+       <li class="nav-item"> <a class="nav-link collapsed" routerLink="/register"> <i class="bi bi-card-list"></i> <span>Register</span> </a></li>
+       <li class="nav-item"> <a class="nav-link collapsed" routerLink="/login"> <i class="bi bi-box-arrow-in-right"></i> <span>Login</span> </a></li>
+       <li class="nav-item"> <a class="nav-link collapsed" routerLink="/pages-error404"> <i class="bi bi-dash-circle"></i> <span>Error 404</span> </a></li>
+       <li class="nav-item"> <a class="nav-link collapsed" routerLink="/pages-blank"> <i class="bi bi-file-earmark"></i> <span>Blank</span> </a></li>
+    </ul>
+ </aside>
