@@ -15,6 +15,9 @@ import { ReportingComponent } from './components/reporting/reporting.component';
 import { FacturationComponent } from './components/facturation/facturation.component';
 import { DashboardComponent } from './pages/dashboard/dashboard.component';
 import { HeaderComponent } from './layouts/header/header.component';
+import { ProfilComponent } from './profil/profil.component';
+import { LoginComponent } from './login/login.component';
+import { PagesRegisterComponent } from './pages-register/pages-register.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +33,10 @@ import { HeaderComponent } from './layouts/header/header.component';
     ReportingComponent,
     FacturationComponent,
     DashboardComponent,
-    HeaderComponent
+    HeaderComponent,
+    ProfilComponent,
+    LoginComponent,
+    PagesRegisterComponent
   ],
   imports: [
     BrowserModule,

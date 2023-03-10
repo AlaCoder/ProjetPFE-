@@ -7,12 +7,14 @@
   
   body {
 	font-family: "Open Sans", sans-serif;
-	background: #f6f9ff;
-	color: #444444;
+	background: #141E30;
+	background: linear-gradient(to right, #0c2646 0%, #204065 60%, #2a5788 100%);;
+    font-weight: bold;
+	color: #770d0d;
   }
   
   a {
-	color: #4154f1;
+	color: #851111;
 	text-decoration: none;
   }
   
@@ -48,8 +50,8 @@
   .pagetitle h1 {
 	font-size: 24px;
 	margin-bottom: 0;
-	font-weight: 600;
-	color: #012970;
+	font-weight: bold;
+	color: #a83816;
   }
   
   /*--------------------------------------------------------------
@@ -204,14 +206,16 @@
   .card {
 	margin-bottom: 30px;
 	border: none;
-	border-radius: 5px;
-	box-shadow: 0px 0 30px rgba(1, 41, 112, 0.1);
+	border-radius: 5px solid;
+	box-shadow: 0px 0 30px rgba(6, 66, 53, 0.1);
   }
   
   .card-header, .card-footer {
 	border-color: #ebeef4;
 	background-color: #fff;
-	color: #798eb3;
+	color: #350404;
+	border: 2px solid ;
+	font-weight: bold;
 	padding: 15px;
   }
   
@@ -219,7 +223,7 @@
 	padding: 20px 0 15px 0;
 	font-size: 18px;
 	font-weight: 500;
-	color: #012970;
+	color: #aa3316;
 	font-family: "Poppins", sans-serif;
   }
   .card-title span {
@@ -229,6 +233,7 @@
   }
   .card-body {
 	padding: 0 20px 20px 20px;
+	border: 3px solid;
   }
   
   .card-img-overlay {
@@ -284,21 +289,21 @@
   .breadcrumb {
 	font-size: 14px;
 	font-family: "Nunito", sans-serif;
-	color: #899bbd;
+	color: #aa704f;
 	font-weight: 600;
   }
   .breadcrumb a {
-	color: #899bbd;
+	color: #aa704f;
 	transition: 0.3s;
   }
   .breadcrumb a:hover {
-	color: #51678f;
+	color: #b19c93;
   }
   .breadcrumb .breadcrumb-item::before {
-	color: #899bbd;
+	color: #536ea0;
   }
   .breadcrumb .active {
-	color: #51678f;
+	color: #f3e3eb;
 	font-weight: 600;
   }
   
@@ -346,8 +351,8 @@
 	transition: all 0.5s;
 	z-index: 997;
 	height: 60px;
-	box-shadow: 0px 2px 20px rgba(1, 41, 112, 0.1);
-	background-color: #fff;
+	box-shadow: 0px 2px 20px rgba(8, 45, 110, 0.699);
+	background-color: #ffffff;
 	padding-left: 20px;
 	/* Toggle Sidebar Button */
 	/* Search Bar */
@@ -532,7 +537,7 @@
 	scrollbar-width: thin;
 	scrollbar-color: #aab7cf transparent;
 	box-shadow: 0px 0px 20px rgba(1, 41, 112, 0.1);
-	background-color: #fff;
+	background-color: #9e173f;
   }
   @media (max-width: 1199px) {
 	.sidebar {
@@ -542,10 +547,10 @@
   .sidebar::-webkit-scrollbar {
 	width: 5px;
 	height: 8px;
-	background-color: #fff;
+	background-color: #fd5d93;
   }
   .sidebar::-webkit-scrollbar-thumb {
-	background-color: #aab7cf;
+	background-color: #fd5d93;
   }
   
   @media (min-width: 1200px) {
@@ -583,7 +588,7 @@
   .sidebar-nav .nav-heading {
 	font-size: 11px;
 	text-transform: uppercase;
-	color: #899bbd;
+	color: #9e173f;
 	font-weight: 600;
 	margin: 10px 0 5px 15px;
   }
@@ -592,30 +597,30 @@
 	align-items: center;
 	font-size: 15px;
 	font-weight: 600;
-	color: #4154f1;
+	color: #dadada;
 	transition: 0.3;
-	background: #f6f9ff;
+	background: #9e173f;
 	padding: 10px 15px;
 	border-radius: 4px;
   }
   .sidebar-nav .nav-link i {
 	font-size: 16px;
 	margin-right: 10px;
-	color: #4154f1;
+	color: #ffffff;
   }
   .sidebar-nav .nav-link.collapsed {
-	color: #012970;
-	background: #fff;
+	color: #ffffff;
+	background: #9e173f;
   }
   .sidebar-nav .nav-link.collapsed i {
-	color: #899bbd;
+	color: #ffffff;
   }
   .sidebar-nav .nav-link:hover {
-	color: #4154f1;
-	background: #f6f9ff;
+	color: #290606;
+	background: #9e173f;
   }
   .sidebar-nav .nav-link:hover i {
-	color: #4154f1;
+	color: #200606;
   }
   .sidebar-nav .nav-link .bi-chevron-down {
 	margin-right: 0;
@@ -634,7 +639,7 @@
 	align-items: center;
 	font-size: 14px;
 	font-weight: 600;
-	color: #012970;
+	color: #ffffff;
 	transition: 0.3;
 	padding: 10px 0 10px 40px;
 	transition: 0.3s;
@@ -646,10 +651,10 @@
 	border-radius: 50%;
   }
   .sidebar-nav .nav-content a:hover, .sidebar-nav .nav-content a.active {
-	color: #4154f1;
+	color: #160505;
   }
   .sidebar-nav .nav-content a.active i {
-	background-color: #4154f1;
+	background-color: #9e173f;
   }
   
   /*--------------------------------------------------------------
