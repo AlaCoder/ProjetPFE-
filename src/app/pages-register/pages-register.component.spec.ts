@@ -23,3 +23,4 @@ describe('PagesRegisterComponent', () => {
     expect(component).toBeTruthy();
   });
 });
+
