@@ -26,6 +26,11 @@ import{MatDialogModule} from '@angular/material/dialog';
 import{MatButtonModule} from '@angular/material/button';
 import { DxSchedulerModule } from 'devextreme-angular';
 import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
+import { ResetComponent } from './reset/reset.component';
+import { ForgetComponent } from './forget/forget.component';
+import { ReactiveFormsModule } from '@angular/forms';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
+
 
 @NgModule({
   declarations: [
@@ -48,6 +53,8 @@ import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
     RechercheMattersComponent,
     
     NvClientComponent,
+         ResetComponent,
+         ForgetComponent,
     
     
   ],
@@ -58,7 +65,10 @@ import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
     MatDialogModule,
     MatInputModule,
     MatButtonModule,
-    DxSchedulerModule
+    DxSchedulerModule,
+    ReactiveFormsModule,
+    HttpClientModule,
+    
   ],
   providers: [],
   bootstrap: [AppComponent]

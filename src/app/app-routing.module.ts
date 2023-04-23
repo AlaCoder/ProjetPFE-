@@ -13,6 +13,8 @@ import { PagesRegisterComponent } from './pages-register/pages-register.componen
 import { DashboardComponent } from './pages/dashboard/dashboard.component';
 import { ProfilComponent } from './profil/profil.component';
 import { RechercheMattersComponent } from './recherche-matters/recherche-matters.component';
+import { ResetComponent } from './reset/reset.component';
+import { ForgetComponent } from './forget/forget.component';
 
 const routes: Routes = [
   
@@ -29,6 +31,8 @@ const routes: Routes = [
   {path:'login',component:LoginComponent},
   {path:'register',component:PagesRegisterComponent},
   {path:'Recherche',component:RechercheMattersComponent},
+  {path:'reset',component:ResetComponent},
+  {path:'forget',component:ForgetComponent},
 ];
 
 @NgModule({

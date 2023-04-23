@@ -8,36 +8,33 @@
             </div>
              <div class="card-body" style="padding-top: 30px;">
    
-                <form>
+                <form [formGroup]="form" (submit)="submit()">
                    <div class="row mb-3">
                      <div class="col">
-                      <label for="inputText" class="form-label">Nom</label>
+                      <label for="inputText" class="form-label">username</label>
                      
-                      <input type="text" class="form-control input-rond" style="width:100%;" placeholder="Nom">
+                      <input type="text" class="form-control input-rond" style="width:100%;" placeholder="Nom" formControlName="username">
                         </div>
-                        <div class="col">
-                        <label for="inputText" class=" form-label">Prenom</label>
-                        <input type="text" class="form-control input-rond" style="width:100%;" placeholder="Prénom">
-                           </div>
+                       
                    </div>
                    <div class="row mb-3">
                      <div class="col">
                       <label for="inputText" class="form-label">Adresse Mail</label>
-                      <input type="email" class="form-control input-rond" style="width:100%;" placeholder="Mail">
+                      <input type="email" class="form-control input-rond" style="width:100%;" placeholder="Mail" formControlName="email">
                      </div>
                      <div class="col">
                       <label for="inputText" class="form-label">Password</label>
-                      <input type="password" class="form-control input-rond" style="width:100%;" placeholder="Password">
+                      <input type="password" class="form-control input-rond" style="width:100%;" placeholder="Password" formControlName="password">
                      </div>
                    </div>
                    <div class="row mb-3">
                     <div class="col">
-                      <label for="inputText" class="form-label"> Mobile </label>
-                      <input type="tel" id="telephone" class="form-control" name="telephone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required>
+                      <label for="inputText" class="form-label"> phone </label>
+                      <input type="tel" id="telephone" class="form-control" name="telephone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required formControlName="phone">
                     </div>
                     <div class="col">
-                      <label for="inputText" class="form-label"> Telephone </label>
-                      <input type="tel" id="telephone" class="form-control" name="telephone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required>
+                      <label for="inputText" class="form-label"> Confirm password </label>
+                      <input type="tel" id="telephone" class="form-control" name="telephone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required formControlName="ConfirmPssword">
                     </div>
                    </div>
                    <div class="row mb-3">

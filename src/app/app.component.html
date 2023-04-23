@@ -1,5 +1,6 @@
-<app-header  ></app-header>
-<app-sidebar  ></app-sidebar>
+
+<app-header *ngIf="!(_router.url === '/register' || _router.url === '/login' || _router.url === '/reset' || _router.url === '/forget'  )"  ></app-header>
+<app-sidebar  *ngIf="!(_router.url === '/register' || _router.url === '/login' || _router.url === '/reset' || _router.url === '/forget'  )" ></app-sidebar>
 <router-outlet></router-outlet>
 <app-footer  ></app-footer>
 
