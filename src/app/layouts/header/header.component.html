@@ -1,0 +1,143 @@
+<header id="header" class="header fixed-top d-flex align-items-center">
+    <div class="d-flex align-items-center justify-content-between"> <a routerLink="/dashboard" class="logo d-flex align-items-center"> <img src="assets/img/logo.png" alt=""> <span class="d-none d-lg-block">ADMIN TIME</span> </a> <i (click)="sidebarToggle()" class="bi bi-list toggle-sidebar-btn"></i></div>
+   
+    <nav class="header-nav ms-auto">
+       
+       <ul class="d-flex align-items-center">
+          <li class="nav-item d-block d-lg-none"> <a class="nav-link nav-icon search-bar-toggle " href="#"> <i class="bi bi-search"></i> </a></li>
+          <li class="nav-item dropdown">
+            <li class="nav-item dropdown">
+               <a class="nav-link nav-icon" href="#" data-bs-toggle="dropdown"> <i class="bi bi-bell"></i> <span class="badge bg-primary badge-number">4</span> </a>
+               <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow notifications">
+                  <li class="dropdown-header"> You have 4 new notifications <a href="#"><span class="badge rounded-pill bg-primary p-2 ms-2">View all</span></a></li>
+                  <li>
+                     <hr class="dropdown-divider">
+                  </li>
+                  <li class="notification-item">
+                     <i class="bi bi-exclamation-circle text-warning"></i>
+                     <div>
+                        <h4>Lorem Ipsum</h4>
+                        <p>Quae dolorem earum veritatis oditseno</p>
+                        <p>30 min. ago</p>
+                     </div>
+                  </li>
+                  <li>
+                     <hr class="dropdown-divider">
+                  </li>
+                  <li class="notification-item">
+                     <i class="bi bi-x-circle text-danger"></i>
+                     <div>
+                        <h4>Atque rerum nesciunt</h4>
+                        <p>Quae dolorem earum veritatis oditseno</p>
+                        <p>1 hr. ago</p>
+                     </div>
+                  </li>
+                  <li>
+                     <hr class="dropdown-divider">
+                  </li>
+                  <li class="notification-item">
+                     <i class="bi bi-check-circle text-success"></i>
+                     <div>
+                        <h4>Sit rerum fuga</h4>
+                        <p>Quae dolorem earum veritatis oditseno</p>
+                        <p>2 hrs. ago</p>
+                     </div>
+                  </li>
+                  <li>
+                     <hr class="dropdown-divider">
+                  </li>
+                  <li class="notification-item">
+                     <i class="bi bi-info-circle text-primary"></i>
+                     <div>
+                        <h4>Dicta reprehenderit</h4>
+                        <p>Quae dolorem earum veritatis oditseno</p>
+                        <p>4 hrs. ago</p>
+                     </div>
+                  </li>
+                  <li>
+                     <hr class="dropdown-divider">
+                  </li>
+                  <li class="dropdown-footer"> <a href="#">Show all notifications</a></li>
+               </ul>
+            </li>
+            <li class="nav-item dropdown">
+               <a class="nav-link nav-icon" href="#" data-bs-toggle="dropdown"> <i class="bi bi-chat-left-text"></i> <span class="badge bg-success badge-number">3</span> </a>
+               <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow messages">
+                  <li class="dropdown-header"> You have 3 new messages <a href="#"><span class="badge rounded-pill bg-primary p-2 ms-2">View all</span></a></li>
+                  <li>
+                     <hr class="dropdown-divider">
+                  </li>
+                  <li class="message-item">
+                     <a href="#">
+                        <img src="assets/img/messages-1.jpg" alt="" class="rounded-circle">
+                        <div>
+                           <h4>{{name}}</h4>
+                           <p>Velit asperiores et ducimus soluta repudiandae labore officia est ut...</p>
+                           <p>4 hrs. ago</p>
+                        </div>
+                     </a>
+                  </li>
+                  <li>
+                     <hr class="dropdown-divider">
+                  </li>
+                  <li class="message-item">
+                     <a href="#">
+                        <img src="assets/img/messages-2.jpg" alt="" class="rounded-circle">
+                        <div>
+                           <h4>{{name}}</h4>
+                           <p>Velit asperiores et ducimus soluta repudiandae labore officia est ut...</p>
+                           <p>6 hrs. ago</p>
+                        </div>
+                     </a>
+                  </li>
+                  <li>
+                     <hr class="dropdown-divider">
+                  </li>
+                  <li class="message-item">
+                     <a href="#">
+                        <img src="assets/img/messages-3.jpg" alt="" class="rounded-circle">
+                        <div>
+                           <h4>{{name}}</h4>
+                           <p>Velit asperiores et ducimus soluta repudiandae labore officia est ut...</p>
+                           <p>8 hrs. ago</p>
+                        </div>
+                     </a>
+                  </li>
+                  <li>
+                     <hr class="dropdown-divider">
+                  </li>
+                  <li class="dropdown-footer"> <a href="#">Show all messages</a></li>
+               </ul>
+            </li>
+          <li class="nav-item dropdown pe-3" *ngIf="authenticated">
+             <a class="nav-link nav-profile d-flex align-items-center pe-0" href="#" data-bs-toggle="dropdown"> <img src="data:image/jpeg;base64,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" alt="Profile" class="rounded-circle"> <span class="d-none d-md-block dropdown-toggle ps-2">{{name}}</span> </a>
+             <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow profile">
+                <li class="dropdown-header">
+                   <h6>{{name}}</h6>
+                   <span>Web Designer</span>
+                </li>
+                <li>
+                   <hr class="dropdown-divider">
+                </li>
+                <li> <a class="dropdown-item d-flex align-items-center" routerLink="/profil"> <i class="bi bi-person"></i> <span>My Profile</span> </a></li>
+                <li>
+                   <hr class="dropdown-divider">
+                </li>
+                <li> <a class="dropdown-item d-flex align-items-center" routerLink="/profil"> <i class="bi bi-gear"></i> <span>Account Settings</span> </a></li>
+                <li>
+                   <hr class="dropdown-divider">
+                </li>
+                <li> <a class="dropdown-item d-flex align-items-center" routerLink="/pages-faq"> <i class="bi bi-question-circle"></i> <span>Need Help?</span> </a></li>
+                <li>
+                   <hr class="dropdown-divider">
+                </li>
+                <li> <a class="dropdown-item d-flex align-items-center" (click)="logout()"> <i class="bi bi-box-arrow-right"></i> <span>Sign Out</span> </a></li>
+             </ul>
+          </li>
+          <li *ngIf="!authenticated">
+            <a class="dropdown-item d-flex align-items-center" routerLink="/login"> <span>Login</span> </a>
+          </li>
+       </ul>
+    </nav>
+ </header>
+ 

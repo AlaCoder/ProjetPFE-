@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Reset Password</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f2f2f2;
+      }
+      
+      form {
+        background-color: #fff;
+        border-radius: 5px;
+        padding: 20px;
+        margin: 50px auto;
+        width: 400px;
+        box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3);
+      }
+      
+      h1 {
+        text-align: center;
+        color: #555;
+        font-size: 28px;
+        margin-bottom: 20px;
+      }
+      
+      label {
+        display: block;
+        color: #666;
+        font-size: 18px;
+        margin-bottom: 10px;
+      }
+      
+      input[type="email"],
+      input[type="password"] {
+        width: 100%;
+        padding: 10px;
+        font-size: 16px;
+        border-radius: 3px;
+        border: 1px solid #ccc;
+        margin-bottom: 20px;
+        box-sizing: border-box;
+      }
+      
+      input[type="submit"] {
+        background-color: #008CBA;
+        color: #fff;
+        padding: 10px 20px;
+        font-size: 18px;
+        border: none;
+        border-radius: 3px;
+        cursor: pointer;
+      }
+      
+      input[type="submit"]:hover {
+        background-color: #006d87;
+      }
+      
+      .error-message {
+        color: red;
+        font-size: 14px;
+        margin-bottom: 10px;
+      }
+      
+      .success-message {
+        color: green;
+        font-size: 14px;
+        margin-bottom: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <form  [formGroup]="form" (submit)="submit()">
+      <h1>Rest password </h1>
+      <label for="password">New Password</label>
+      <input type="password" id="password" name="password" formControlName="NewPassword" required >
+      
+      <label for="confirm-password">Confirm Password</label>
+      <input type="password" id="confirm-password" name="confirm-password" formControlName="ConfirmPsswordPassword" required>
+      
+      <input type="submit" value="Forget password" >
+      
+      <div class="error-message">
+        <!-- Error messages here -->
+      </div>
+      
+      <div class="success-message">
+        <!-- Success message here -->
+      </div>
+    </form>
+  </body>
+</html>
