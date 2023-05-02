@@ -15,3 +15,9 @@
     border-color: rgb(73, 39, 128);
     box-shadow: 0 0 5px rgba(0, 0, 255, 0.3);
   }
+  .checkbox-lg .form-check-input[type="checkbox"] {
+    width: 2.5rem;
+    height: 2.5rem;
+    margin-top: 0.3rem;
+    margin-right: 0.5rem;
+  }

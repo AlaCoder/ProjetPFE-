@@ -31,6 +31,9 @@ import { ForgetComponent } from './forget/forget.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { ToastrModule } from 'ngx-toastr';
+import { TousclientComponent } from './tousclient/tousclient.component';
+import { EditClientComponent } from './edit-client/edit-client.component';
+import { ModifierClientComponent } from './modifier-client/modifier-client.component';
 
 
 @NgModule({
@@ -56,6 +59,9 @@ import { ToastrModule } from 'ngx-toastr';
     NvClientComponent,
          ResetComponent,
          ForgetComponent,
+         TousclientComponent,
+         EditClientComponent,
+         ModifierClientComponent,
     
     
   ],

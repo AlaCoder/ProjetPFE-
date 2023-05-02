@@ -17,38 +17,36 @@
     </form>
   </div>
   <section>
-    <table>
+    <table >
         <thead>
           <tr>
-            <th>Nom</th>
-            <th>Prénom</th>
-            <th>Email</th>
-            <th>Adresse</th>
-            <th>Ville</th>
-            <th>Pays</th>
-            <th>Code Postal</th>
+            <th>matterID</th>
+            <th>datededemarage</th>
+            <th>datedefin</th>
+            <th>Libellé</th>
+            <th>typeMatter</th>
+            <th>typeforfait</th>
+            <th>montant</th>
+            <th>device</th>
+            <th>tva</th>
+            <th>status</th>
           </tr>
         </thead>
         <tbody>
-          <tr>
-            <td>Smith</td>
-            <td>John</td>
-            <td>john.smith@example.com</td>
-            <td>123 Main St</td>
-            <td>Anytown</td>
-            <td>USA</td>
-            <td>12345</td>
+          <tr *ngFor="let m of Matter">
+            <td>{{m.matterID}}</td>
+            <td>{{m.datededemarage}}</td>
+            <td>{{m.datedefin}}</td>
+            <td></td>
+            <td>{{m.typeMatter}}</td>
+            <td>{{m.typeforfait}}</td>
+            <td>{{m.montant}}</td>
+            <td>{{m.device}}</td>
+            <td>{{m.tva}}</td>
+            <td>{{m.status}}</td>
           </tr>
-          <tr>
-            <td>Doe</td>
-            <td>Jane</td>
-            <td>jane.doe@example.com</td>
-            <td>456 Oak Ave</td>
-            <td>Anytown</td>
-            <td>USA</td>
-            <td>12345</td>
-          </tr>
-          <!-- Ajoutez plus de lignes ici -->
+       
+          
         </tbody>
       </table>
       

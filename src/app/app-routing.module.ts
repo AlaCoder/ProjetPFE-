@@ -15,6 +15,9 @@ import { ProfilComponent } from './profil/profil.component';
 import { RechercheMattersComponent } from './recherche-matters/recherche-matters.component';
 import { ResetComponent } from './reset/reset.component';
 import { ForgetComponent } from './forget/forget.component';
+import { TousclientComponent } from './tousclient/tousclient.component';
+import { EditClientComponent } from './edit-client/edit-client.component';
+import { ModifierClientComponent } from './modifier-client/modifier-client.component';
 
 const routes: Routes = [
   
@@ -33,6 +36,9 @@ const routes: Routes = [
   {path:'Recherche',component:RechercheMattersComponent},
   {path:'reset',component:ResetComponent},
   {path:'forget',component:ForgetComponent},
+  {path:'tous',component:TousclientComponent},
+  { path: 'edit-client/:clientID', component: EditClientComponent },
+  {path:'modifier-client',component:ModifierClientComponent}
 ];
 
 @NgModule({

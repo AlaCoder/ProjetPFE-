@@ -1,0 +1,47 @@
+<main id="main" class="main">
+    <div class="pagetitle">
+       <h1>Profile  </h1>
+       
+       <nav>
+          <ol class="breadcrumb">
+             <li class="breadcrumb-item"><a routerLink="/">Home</a></li>
+             <li class="breadcrumb-item">Users</li>
+             <li class="breadcrumb-item active">Profile</li>
+          </ol>
+       </nav>
+    </div>
+    <table>
+        <div class="container">
+            <h2>Liste des clients</h2>
+            <div class="table-responsive">
+              <table class="table table-hover">
+                <thead class="thead-dark">
+      <tr>
+        <th>Nom</th>
+        <th>Prénom</th>
+        <th>Email</th>
+        <th>Supprimer</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let client of clients">
+
+        <td>{{ client. nameClient}}</td>
+        <td>{{ client.numeroClient }}</td>
+        <td>{{ client.description}}</td>
+        <td>
+            <button (click)="deleteClient(client.clientID)">Supprimer</button>
+          </td>
+          <td>
+            <button (click)="editClient(client)" >Modifier</button>
+          </td>
+          <td>
+            <a routerLink="/edit-client/5"> Modifier</a>
+            
+          </td>
+      </tr>
+    </tbody>
+    
+  </table>
+  </div>
+  </div>
