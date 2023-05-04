@@ -1,0 +1,96 @@
+<main id="main" class="main">
+    <div class="pagetitle">
+        <h1>IFORMATION DU TIMELINES</h1>
+        <nav>
+           <ol class="breadcrumb">
+              <li class="breadcrumb-item"><a routerLink="/">Home</a></li>
+              <li class="breadcrumb-item">TIMESHEETS</li>
+              <li class="breadcrumb-item active">TIMELINES</li>
+           </ol>
+        </nav>
+     </div>
+     <div>
+        <div class="container">
+            <div class="row">
+              <div class="col">
+                <h1>Informations personnelles</h1>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col">
+                <div class="info">
+                  <div class="label">Date:</div>
+                  <div class="value">Dupont</div>
+                </div>
+                <div class="info">
+                  <div class="label">Prénom :</div>
+                  <div class="value">Jean</div>
+                </div>
+                <div class="info">
+                  <div class="label">Âge :</div>
+                  <div class="value">30 ans</div>
+                </div>
+                <div class="info">
+                  <div class="label">Ville :</div>
+                  <div class="value">Paris</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+     </div>
+     <div class="part2">
+        <div class="pagetitle">
+            <h1> TIMELINES</h1>
+            <nav>
+               <ol class="breadcrumb">
+                  <li class="breadcrumb-item"><a routerLink="/">Home</a></li>
+                  <li class="breadcrumb-item">TIMESHEETS</li>
+                  <li class="breadcrumb-item active">TIMELINES</li>
+               </ol>
+            </nav>
+            <section>
+                <table>
+                    <thead>
+                      <tr>
+                        <th>timeLinesID</th>
+                        <th>clientID</th>
+                        <th>matterID</th>
+                        <th>entite</th>
+                        <th>manager</th>
+                        <th>dure</th>
+                        <th>taux</th>
+                        <th>description</th>
+                       
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr *ngFor="let client of clients">
+                        <td>{{client.timeLinesID}}</td>
+                        <td>{{client.clientID}}</td>
+                      
+                        <td>{{client.matterID}}</td>
+                        <td>{{client.entite}}</td>
+                        <td>{{client.manager}}</td>
+                        <td>{{client.dure}}</td>
+                        <td>{{client.taux}}</td>
+                        <td>{{client.description}}</td>
+                        <td>
+                            <button (click)="deleteTimeline(client.timeLinesID)">Supprimer</button>
+                          </td>
+                         
+                      </tr>
+                      
+                      <!-- Ajoutez plus de lignes ici -->
+                    </tbody>
+                  </table>
+                  
+                  
+              </section>
+            <div class="aj" >
+                <button (click)="Open()" type="submit"  class="btn btn-primary me-2">Aouter un nouveau timeline</button>
+
+            </div>
+         </div>
+            </div>
+</main> 

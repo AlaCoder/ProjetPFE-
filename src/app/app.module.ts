@@ -35,6 +35,10 @@ import { TousclientComponent } from './tousclient/tousclient.component';
 import { EditClientComponent } from './edit-client/edit-client.component';
 import { ModifierClientComponent } from './modifier-client/modifier-client.component';
 
+import { TimeLineComponent } from './time-line/time-line.component';
+import { EditMatterComponent } from './edit-matter/edit-matter.component';
+import { NvTimesheetComponent } from './nv-timesheet/nv-timesheet.component';
+
 
 @NgModule({
   declarations: [
@@ -62,6 +66,10 @@ import { ModifierClientComponent } from './modifier-client/modifier-client.compo
          TousclientComponent,
          EditClientComponent,
          ModifierClientComponent,
+        
+         TimeLineComponent,
+                  EditMatterComponent,
+                  NvTimesheetComponent,
     
     
   ],

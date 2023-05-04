@@ -3,14 +3,14 @@
      <div class="col-lg">
         <div class="card">
            <div class="card-header">
-              <p style="font-size: 20px ; font-weight: bold;position: absolute; top: 2%;"><i class="bi bi-info-circle-fill" style="margin-right: 10px;"></i><span>INFOS MATTER</span> </p>
+              <p style="font-size: 20px ; font-weight: bold;position: absolute; top: 2%;"><i class="bi bi-info-circle-fill" style="margin-right: 10px;"></i><span>Ajouter une timeline</span> </p>
            </div>
            <div class="card-body" style="padding-top: 30px;">
            <form [formGroup]="form" (submit)="submit()">
               <div class="row mb-3">
                  <div class="col">
                 <label for="inputText" class="form-label">Client</label>
-                <select class="form-select input-rond" style="width: 100%;" formControlName="nameClient"
+                <select class="form-select input-rond" style="width: 100%;" formControlName="clientId"
                 ><option  *ngFor="let option of client" [value]="option.clientID">{{ option.nameClient }}</option>
                   
                </select>

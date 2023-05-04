@@ -1,0 +1,52 @@
+<main id="main" class="main">
+    <div class="pagetitle">
+        <h1>Modifier Matter</h1>
+        <nav>
+           
+        </nav>
+     </div>
+      <form [formGroup]="form" (submit)=" onSubmit()">
+          <div class="form-group">
+            <label for="nom">matterID</label>
+            <input type="text" class="form-control" id="nom" name="nom"  formControlName="matterID" >
+          </div>
+          <div class="form-group">
+            <label for="prenom">datededemarage</label>
+            <input type="date" class="form-control" id="prenom" name="prenom"  formControlName="datededemarage" >
+          </div>
+          <div class="form-group">
+            <label for="description">datedefin</label>
+            <input type="date" class="form-control" id="prenom" name="prenom"  formControlName="datedefin" >
+          </div>
+          <div class="form-group">
+            <label for="prenom">Libellé</label>
+            <input type="text" class="form-control" id="prenom" name="prenom"  formControlName="Libellé" >
+          </div>
+          <div class="form-group">
+            <label for="prenom">Type Matter</label>
+            <input type="text" class="form-control" id="prenom" name="prenom"  formControlName="typeMatter" >
+          </div>
+          <div class="form-group">
+            <label for="prenom">typeforfait</label>
+            <input type="text" class="form-control" id="prenom" name="prenom"  formControlName="typeforfait" >
+          </div>
+          <div class="form-group">
+            <label for="prenom">montant</label>
+            <input type="number" class="form-control" id="prenom" name="prenom"  formControlName="montant" >
+          </div>
+          <div class="form-group">
+            <label for="prenom">device</label>
+            <input type="text" class="form-control" id="prenom" name="prenom"  formControlName="device" >
+          </div>
+          <div class="form-group">
+            <label for="prenom">Tva</label>
+            <input type="number" class="form-control" id="prenom" name="prenom"  formControlName="tva" >
+          </div>
+          <div class="form-group">
+            <label for="prenom">status</label>
+            <input type="text" class="form-control" id="prenom" name="prenom"  formControlName="status" >
+          </div>
+          <button type="submit" class="btn btn-primary">Enregistrer</button>
+        </form>
+      </main>
+    

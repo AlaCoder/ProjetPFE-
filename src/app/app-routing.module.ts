@@ -18,6 +18,9 @@ import { ForgetComponent } from './forget/forget.component';
 import { TousclientComponent } from './tousclient/tousclient.component';
 import { EditClientComponent } from './edit-client/edit-client.component';
 import { ModifierClientComponent } from './modifier-client/modifier-client.component';
+import { TimeLineComponent } from './time-line/time-line.component';
+import { EditMatterComponent } from './edit-matter/edit-matter.component';
+
 
 const routes: Routes = [
   
@@ -38,7 +41,10 @@ const routes: Routes = [
   {path:'forget',component:ForgetComponent},
   {path:'tous',component:TousclientComponent},
   { path: 'edit-client/:clientID', component: EditClientComponent },
-  {path:'modifier-client',component:ModifierClientComponent}
+  {path:'modifclient',component:ModifierClientComponent},
+  {path:'time-line',component:TimeLineComponent},
+  {path:'edit-matter/:matterID',component:EditMatterComponent}
+
 ];
 
 @NgModule({

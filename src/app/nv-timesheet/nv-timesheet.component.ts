@@ -4,36 +4,33 @@ import { FormBuilder, FormGroup } from '@angular/forms';
 import { ToastrService } from 'ngx-toastr';
 
 @Component({
-  selector: 'app-nv-client',
-  templateUrl: './nv-client.component.html',
-  styleUrls: ['./nv-client.component.css']
+  selector: 'app-nv-timesheet',
+  templateUrl: './nv-timesheet.component.html',
+  styleUrls: ['./nv-timesheet.component.css']
 })
-export class NvClientComponent implements OnInit {
+export class NvTimesheetComponent implements OnInit {
   form!:FormGroup;
-  client: any[] = [];
-  Matter: any[] = [];
+  Timeline: any[] = [];
+
   constructor(private formbuilder:FormBuilder,private http:HttpClient,private toastr: ToastrService) { }
 
   ngOnInit(): void {
-    this.http.get<any[]>('http://localhost:5093/api/Client')
+    this.http.get<any[]>('http://localhost:5093/api/TimeLinesControllers')
   .subscribe((response) => {
-    this.client = response;
-  });
-  this.http.get<any[]>('http://localhost:5093/api/Matter')
-  .subscribe((response) => {
-    this.Matter = response;
+    this.Timeline = response;
+
   });
   this.form = this.formbuilder.group(
 
     {
-      clientId:'',
-      matterID:'',
-      entite:'',
+      timeLinesID:'',
+      numTimesheet:'',
+      date:'',
+      totalH:'',
+      totalV:'',
+      collaborateur:'',
       manager:'',
-      dure:'',
-      taux:'',
-      description:'',
-      facturable: true 
+     
 
 
 
@@ -44,7 +41,6 @@ export class NvClientComponent implements OnInit {
     }
 
   );
-
   }
   async submit() {
     try {
@@ -52,11 +48,12 @@ export class NvClientComponent implements OnInit {
       const headers = new HttpHeaders({
         'Content-Type': 'application/json'
       });
+      
       console.log( JSON.stringify(data))
-      const res = await this.http.post('http://localhost:5093/api/TimeLinesControllers/TimeLines', JSON.stringify(data), { headers })
+      const res = await this.http.post('http://localhost:5093/api/Timesheet/Timesheet', JSON.stringify(data), { headers })
       .subscribe(
         response => {
-          this.toastr.success('TimeLine created')
+          this.toastr.success('timesheet created')
         },
         error => {
           if (error.status === 400) {
@@ -70,5 +67,6 @@ export class NvClientComponent implements OnInit {
       
     }
   }
+
 
 }

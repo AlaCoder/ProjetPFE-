@@ -1,0 +1,24 @@
+.card-header{
+    background-color:#e4a890 ;
+    height: 46px;
+    width: 100%;
+}
+.input-rond {
+    border-radius: 50px; /* arrondir les coins pour créer une forme ronde */
+    width: 1500px; /* définir une largeur */
+    height: 50px; /* définir une hauteur */
+    padding: 10px; /* ajouter un padding pour plus d'espace à l'intérieur */
+    border: 2px solid #ccc ;
+    box-shadow: 0 0 7px rgba(204, 85, 85, 0.3); /* ajouter une ombre pour donner de la profondeur */
+  }
+  .input-rond:focus, .input-rond:active {
+    border-color: rgb(73, 39, 128);
+    box-shadow: 0 0 5px rgba(0, 0, 255, 0.3);
+  }
+  .checkbox-lg .form-check-input[type="checkbox"] {
+    width: 1.5rem;
+    height: 1.5rem;
+    margin-top: 0.3rem;
+    margin-right: 0.5rem;
+  }
+  

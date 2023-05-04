@@ -30,6 +30,8 @@
             <th>device</th>
             <th>tva</th>
             <th>status</th>
+            <th>Delete</th>
+            <th>Modifier</th>
           </tr>
         </thead>
         <tbody>
@@ -44,6 +46,14 @@
             <td>{{m.device}}</td>
             <td>{{m.tva}}</td>
             <td>{{m.status}}</td>
+            <td>
+              <button (click)="deleteMatter(m.matterID)">Supprimer</button>
+            </td>
+            <td>
+              <button (click)="editmatter(Matter)" >Modifier</button>
+            </td>
+           
+           
           </tr>
        
           
