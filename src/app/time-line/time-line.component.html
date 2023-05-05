@@ -61,23 +61,30 @@
                         <th>dure</th>
                         <th>taux</th>
                         <th>description</th>
+                        <th>Supprimer</th>
+                        <th>Modifier</th>
+
                        
                       </tr>
                     </thead>
                     <tbody>
-                      <tr *ngFor="let client of clients">
-                        <td>{{client.timeLinesID}}</td>
-                        <td>{{client.clientID}}</td>
+                      <tr *ngFor="let t of timeline">
+                        <td>{{t.timeLinesID}}</td>
+                        <td>{{t.clientID}}</td>
                       
-                        <td>{{client.matterID}}</td>
-                        <td>{{client.entite}}</td>
-                        <td>{{client.manager}}</td>
-                        <td>{{client.dure}}</td>
-                        <td>{{client.taux}}</td>
-                        <td>{{client.description}}</td>
+                        <td>{{t.matterID}}</td>
+                        <td>{{t.entite}}</td>
+                        <td>{{t.manager}}</td>
+                        <td>{{t.dure}}</td>
+                        <td>{{t.taux}}</td>
+                        <td>{{t.description}}</td>
                         <td>
-                            <button (click)="deleteTimeline(client.timeLinesID)">Supprimer</button>
+                            <button (click)="deleteTimeline(t.timeLinesID)">Supprimer</button>
                           </td>
+                          <td>
+                            <button (click)="edittimeline(t.timeLinesID)" >Modifier</button>
+                          </td>
+                     
                          
                       </tr>
                       

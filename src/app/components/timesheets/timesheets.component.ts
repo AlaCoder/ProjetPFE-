@@ -11,20 +11,37 @@ import { NvTimesheetComponent } from 'src/app/nv-timesheet/nv-timesheet.componen
   styleUrls: ['./timesheets.component.css']
 })
 export class TimesheetsComponent implements OnInit {
-  clients: any[]= [];
+ 
+  timesheet: any[]= [];
 
   constructor( private http: HttpClient,private router: Router ,private matdialog : MatDialog) { }
 
   ngOnInit(): void {
     this.http.get('http://localhost:5093/api/Timesheet').subscribe((response: any) => {
-      this.clients = response;
-      console.log(this.clients);
+      this.timesheet = response;
+      console.log(this.timesheet);
     });
   }
   Open(){
     this.matdialog.open(NvTimesheetComponent);
 
    }
+   deleteTimesheet(id: number) {
+    if (confirm('Êtes-vous sûr de vouloir supprimer ce timesheet ?')) {
+      this.http.delete(`http://localhost:5093/api/Timesheet/${id}`).subscribe((response: any) => {
+        const index = this. timesheet.findIndex(c => c.id ===id);
+        this.timesheet.splice(index, 1);
+      });
+    }
+    
+  }
+  editClient(timesheet: any) {
+ 
+    this.router.navigate(['edit-client', timesheet.clientID]);
+    
+  
+  
+  }
 
   
 

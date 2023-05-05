@@ -23,7 +23,7 @@ export class EditMatterComponent implements OnInit {
 
   ngOnInit(): void {
     this.form = this.formbuilder.group({
-      matterID: [''],
+    
       datededemarage: [''],
       datedefin: [''],
       Libellé: [''],
@@ -44,7 +44,7 @@ export class EditMatterComponent implements OnInit {
   }
   onSubmit(): void {
     console.log(this.form.value)
-    this.http.put(`http://localhost:5093/api/Matter/Matter/${this.matterID}`, this.form.value).subscribe((response: any) => {
+    this.http.put(`http://localhost:5093/api/Matter/${this.matterID}`, this.form.value).subscribe((response: any) => {
       this.router.navigate(['/Recherche']);
     }, error => {
       this.errorMessage = error.message;

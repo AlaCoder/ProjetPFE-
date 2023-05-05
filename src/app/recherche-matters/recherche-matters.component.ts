@@ -19,7 +19,7 @@ export class RechercheMattersComponent implements OnInit {
   });
 }
 deleteMatter(matterID: number) {
-  if (confirm('Êtes-vous sûr de vouloir supprimer ce client ?')) {
+  if (confirm('Êtes-vous sûr de vouloir supprimer ce matter ?')) {
     this.http.delete(`http://localhost:5093/api/Matter/${matterID}`).subscribe((response: any) => {
       const index = this.Matter.findIndex(m => m.id ===matterID);
       this.Matter.splice(index, 1);
@@ -27,9 +27,9 @@ deleteMatter(matterID: number) {
   }
   
 }
-editmatter(Matter: any) {
+editmatter(matterID: number) {
  
-  this.router.navigate(['edit-matter', Matter.matterID]);
+  this.router.navigate(['edit-matter', matterID]);
   
 
 

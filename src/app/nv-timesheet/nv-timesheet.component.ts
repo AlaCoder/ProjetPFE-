@@ -23,13 +23,15 @@ export class NvTimesheetComponent implements OnInit {
   this.form = this.formbuilder.group(
 
     {
-      timeLinesID:'',
+      timelineId:'',
       numTimesheet:'',
       date:'',
       totalH:'',
       totalV:'',
       collaborateur:'',
       manager:'',
+      timeline:'',
+      
      
 
 

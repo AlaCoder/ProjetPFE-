@@ -20,6 +20,8 @@ import { EditClientComponent } from './edit-client/edit-client.component';
 import { ModifierClientComponent } from './modifier-client/modifier-client.component';
 import { TimeLineComponent } from './time-line/time-line.component';
 import { EditMatterComponent } from './edit-matter/edit-matter.component';
+import { EditTimelineComponent } from './edit-timeline/edit-timeline.component';
+import { EditTimesheetComponent } from './edit-timesheet/edit-timesheet.component';
 
 
 const routes: Routes = [
@@ -43,8 +45,9 @@ const routes: Routes = [
   { path: 'edit-client/:clientID', component: EditClientComponent },
   {path:'modifclient',component:ModifierClientComponent},
   {path:'time-line',component:TimeLineComponent},
-  {path:'edit-matter/:matterID',component:EditMatterComponent}
-
+  {path:'edit-matter/:matterID',component:EditMatterComponent},
+  {path:'edit-timeline/:timeLinesID',component:EditTimelineComponent},
+  {path:'edit-timesheet/:id',component:EditTimesheetComponent}
 ];
 
 @NgModule({

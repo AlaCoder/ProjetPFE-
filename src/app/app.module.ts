@@ -38,6 +38,8 @@ import { ModifierClientComponent } from './modifier-client/modifier-client.compo
 import { TimeLineComponent } from './time-line/time-line.component';
 import { EditMatterComponent } from './edit-matter/edit-matter.component';
 import { NvTimesheetComponent } from './nv-timesheet/nv-timesheet.component';
+import { EditTimelineComponent } from './edit-timeline/edit-timeline.component';
+import { EditTimesheetComponent } from './edit-timesheet/edit-timesheet.component';
 
 
 @NgModule({
@@ -70,6 +72,8 @@ import { NvTimesheetComponent } from './nv-timesheet/nv-timesheet.component';
          TimeLineComponent,
                   EditMatterComponent,
                   NvTimesheetComponent,
+                  EditTimelineComponent,
+                  EditTimesheetComponent,
     
     
   ],

@@ -25,18 +25,26 @@
                 <th>totalH</th>
                 <th>totalV</th>
                 <th>collaborateur</th>
+                <th>Supprimer</th>
+                <th>Modifier</th>
                
               </tr>
             </thead>
             <tbody>
-              <tr *ngFor="let client of clients">
-                <td>{{client.id}}</td>
-                <td>{{client.timeLinesID}}</td>
-                <td>{{client.numTimesheet}}</td>
-                <td>{{client.date}}</td>
-                <td>{{client.totalH}}</td>
-                <td>{{client.totalV}}</td>
-                <td>{{client.collaborateur}}</td>
+              <tr *ngFor="let t of timesheet">
+                <td>{{t.id}}</td>
+                <td>{{t.timeLinesID}}</td>
+                <td>{{t.numTimesheet}}</td>
+                <td>{{t.date}}</td>
+                <td>{{t.totalH}}</td>
+                <td>{{t.totalV}}</td>
+                <td>{{t.collaborateur}}</td>
+                <td>
+                  <button (click)="deleteTimesheet(t.id)">Supprimer</button>
+                </td>
+                <td>
+                  <button (click)="editClient(timesheet)" >Modifier</button>
+                </td>
                
               </tr>
               

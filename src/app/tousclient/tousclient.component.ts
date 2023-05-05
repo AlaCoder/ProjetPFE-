@@ -9,6 +9,7 @@ import { Router } from '@angular/router';
 })
 export class TousclientComponent implements OnInit {
   clients: any[]= [];
+  timesheet:any[]=[];
   constructor(private http: HttpClient,private router: Router) { }
 
   ngOnInit(): void {
@@ -19,10 +20,10 @@ export class TousclientComponent implements OnInit {
   });
   
 }
-deleteClient(clientID: number) {
-  if (confirm('Êtes-vous sûr de vouloir supprimer ce client ?')) {
-    this.http.delete(`http://localhost:5093/api/Client/${clientID}`).subscribe((response: any) => {
-      const index = this.clients.findIndex(c => c.id ===clientID);
+deleteClient(id: number) {
+  if (confirm('Êtes-vous sûr de vouloir supprimer ce timesheet ?')) {
+    this.http.delete(`http://localhost:5093/api/Client/${id}`).subscribe((response: any) => {
+      const index = this.timesheet.findIndex(c => c.id ===id);
       this.clients.splice(index, 1);
     });
   }

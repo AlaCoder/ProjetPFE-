@@ -11,29 +11,37 @@ import { HttpClient } from '@angular/common/http';
   styleUrls: ['./time-line.component.css']
 })
 export class TimeLineComponent implements OnInit {
-  clients: any[]= [];
+  timeline: any[]= [];
 
   constructor( private matdialog : MatDialog ,private http: HttpClient,private router: Router) { }
 
   ngOnInit(): void {
     this.http.get('http://localhost:5093/api/TimeLinesControllers').subscribe((response: any) => {
-      this.clients = response;
-      console.log(this.clients);
+      this.timeline = response;
+      console.log(this.timeline);
   });
 }
 deleteTimeline(timeLinesID: number) {
   if (confirm('Êtes-vous sûr de vouloir supprimer ce timeline ?')) {
     this.http.delete(`http://localhost:5093/api/TimeLinesControllers/${timeLinesID}`).subscribe((response: any) => {
-      const index = this.clients.findIndex(c => c.id ===timeLinesID);
-      this.clients.splice(index, 1);
+      const index = this.timeline.findIndex(c => c.id ===timeLinesID);
+      this.timeline.splice(index, 1);
     });
   }
   
 }
+
   Open(){
     this.matdialog.open(NvClientComponent);
 
    }
+   edittimeline( timeLinesID: number) {
+ 
+    this.router.navigate(['edit-timeline',  timeLinesID]);
+    
+  
+  
+  }
 
 }
 
