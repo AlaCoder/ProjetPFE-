@@ -13,6 +13,7 @@ import { NvTimesheetComponent } from 'src/app/nv-timesheet/nv-timesheet.componen
 export class TimesheetsComponent implements OnInit {
  
   timesheet: any[]= [];
+  isManager=false;
 
   constructor( private http: HttpClient,private router: Router ,private matdialog : MatDialog) { }
 
@@ -35,9 +36,9 @@ export class TimesheetsComponent implements OnInit {
     }
     
   }
-  editClient(timesheet: any) {
+  editClient(id: number) {
  
-    this.router.navigate(['edit-client', timesheet.clientID]);
+    this.router.navigate(['edit-timesheet', id]);
     
   
   

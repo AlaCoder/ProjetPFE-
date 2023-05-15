@@ -10,30 +10,37 @@ import { ToastrService } from 'ngx-toastr';
 })
 export class NvClientComponent implements OnInit {
   form!:FormGroup;
-  client: any[] = [];
+  User: any[] = [];
   Matter: any[] = [];
+  Libelle: any[] = [];
   constructor(private formbuilder:FormBuilder,private http:HttpClient,private toastr: ToastrService) { }
 
   ngOnInit(): void {
-    this.http.get<any[]>('http://localhost:5093/api/Client')
+    this.http.get<any[]>('http://localhost:5093/api/User/GetALLUsers')
   .subscribe((response) => {
-    this.client = response;
+    this.User = response;
   });
   this.http.get<any[]>('http://localhost:5093/api/Matter')
   .subscribe((response) => {
     this.Matter = response;
+    for(var i of this.Matter){
+      this.Libelle.push({"libelle":i.libellé,"id":i.matterID})
+    }
   });
   this.form = this.formbuilder.group(
 
     {
-      clientId:'',
+      UserID:'',
       matterID:'',
       entite:'',
       manager:'',
       dure:'',
       taux:'',
       description:'',
-      facturable: true 
+      timesheetID:'',
+      facturable: true,
+      
+  
 
 
 

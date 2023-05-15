@@ -22,6 +22,9 @@ import { TimeLineComponent } from './time-line/time-line.component';
 import { EditMatterComponent } from './edit-matter/edit-matter.component';
 import { EditTimelineComponent } from './edit-timeline/edit-timeline.component';
 import { EditTimesheetComponent } from './edit-timesheet/edit-timesheet.component';
+import { AddUserComponent } from './add-user/add-user.component';
+import { TimelineValidatedComponent } from './timeline-validated/timeline-validated.component';
+import { TimesheetValidatedComponent } from './timesheet-validated/timesheet-validated.component';
 
 
 const routes: Routes = [
@@ -47,7 +50,10 @@ const routes: Routes = [
   {path:'time-line',component:TimeLineComponent},
   {path:'edit-matter/:matterID',component:EditMatterComponent},
   {path:'edit-timeline/:timeLinesID',component:EditTimelineComponent},
-  {path:'edit-timesheet/:id',component:EditTimesheetComponent}
+  {path:'edit-timesheet/:id',component:EditTimesheetComponent},
+  {path:'add-user',component:AddUserComponent},
+  {path:'timeline-validated',component:TimelineValidatedComponent},
+  {path:'timesheet-validated',component:TimesheetValidatedComponent}
 ];
 
 @NgModule({

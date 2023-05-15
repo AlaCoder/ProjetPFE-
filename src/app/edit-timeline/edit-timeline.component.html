@@ -8,14 +8,7 @@
       <form [formGroup]="form" (submit)=" onSubmit()">
           
           <div class="form-group">
-            <label for="prenom">clientID</label>
-            <input type="number" class="form-control" id="prenom" name="prenom"  formControlName="clientID" >
-          </div>
-          <div class="form-group">
-            <label for="description"> matterID</label>
-            <input type="number" class="form-control" id="prenom" name="prenom"  formControlName="matterID" >
-          </div>
-          <div class="form-group">
+         
             <label for="prenom"> entite</label>
             <input type="text" class="form-control" id="prenom" name="prenom"  formControlName="entite" >
           </div>
@@ -34,6 +27,10 @@
           <div class="form-group">
             <label for="prenom">taux</label>
             <input type="number" class="form-control" id="prenom" name="prenom"  formControlName="taux" >
+          </div>
+          <div class="form-group">
+            <label for="prenom">facturable</label>
+            <input class="form-check-input checkbox-lg" type="checkbox" id="facturable" name="facturable">
           </div>
 
           

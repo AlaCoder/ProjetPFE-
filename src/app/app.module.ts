@@ -40,6 +40,9 @@ import { EditMatterComponent } from './edit-matter/edit-matter.component';
 import { NvTimesheetComponent } from './nv-timesheet/nv-timesheet.component';
 import { EditTimelineComponent } from './edit-timeline/edit-timeline.component';
 import { EditTimesheetComponent } from './edit-timesheet/edit-timesheet.component';
+import { AddUserComponent } from './add-user/add-user.component';
+import { TimelineValidatedComponent } from './timeline-validated/timeline-validated.component';
+import { TimesheetValidatedComponent } from './timesheet-validated/timesheet-validated.component';
 
 
 @NgModule({
@@ -74,6 +77,9 @@ import { EditTimesheetComponent } from './edit-timesheet/edit-timesheet.componen
                   NvTimesheetComponent,
                   EditTimelineComponent,
                   EditTimesheetComponent,
+                  AddUserComponent,
+                  TimelineValidatedComponent,
+                  TimesheetValidatedComponent,
     
     
   ],

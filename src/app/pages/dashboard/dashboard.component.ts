@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Emitters } from 'src/app/emitters/emitters';
+import { Emitters }  from 'src/app/emitters/Emitters';
+import { Test } from 'src/app/emitters/test';
 
 @Component({
   selector: 'app-Dashboard',
@@ -8,7 +9,7 @@ import { Emitters } from 'src/app/emitters/emitters';
 })
 export class DashboardComponent implements OnInit {
 
-  constructor() { }
+  constructor(private test:Test) { }
 
   async ngOnInit():  Promise<void>  {
     try {
@@ -19,8 +20,32 @@ export class DashboardComponent implements OnInit {
     
       if (response.ok) {
         Emitters.authEmitter.emit(true);
+        
         const result = await response.json();
-        console.log(result);
+        var id = result.id;
+        console.log(result.id);
+        const url = `http://localhost:5093/api/User/${id}/roles`;
+
+        try {
+          const response = await fetch(url, {
+            method: 'GET',
+            headers: {}
+          });
+        
+          if (response.ok) {
+            const result = await response.json();
+            console.log(result[0]);
+            if(result[0]=="Manager")
+            Emitters.ManagerEmitter.emit(true);
+            
+
+          }
+        } catch (err) {
+          console.error(err);
+        }
+        
+
+
         
       }
     } catch (err) {

@@ -30,7 +30,7 @@ export class NvTimesheetComponent implements OnInit {
       totalV:'',
       collaborateur:'',
       manager:'',
-      timeline:'',
+    
       
      
 

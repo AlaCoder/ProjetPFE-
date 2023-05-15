@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import {NvClientComponent } from './nv-client.component';
+import { TimesheetValidatedComponent } from './timesheet-validated.component';
 
-describe('NvClientComponent', () => {
-  let component: NvClientComponent;
-  let fixture: ComponentFixture<NvClientComponent>;
+describe('TimesheetValidatedComponent', () => {
+  let component: TimesheetValidatedComponent;
+  let fixture: ComponentFixture<TimesheetValidatedComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ NvClientComponent ]
+      declarations: [ TimesheetValidatedComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(NvClientComponent);
+    fixture = TestBed.createComponent(TimesheetValidatedComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

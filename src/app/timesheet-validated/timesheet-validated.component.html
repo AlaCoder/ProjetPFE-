@@ -1,0 +1,62 @@
+<main id="main" class="main">
+  
+    
+    <div class="part2">
+       <div class="pagetitle">
+           <h1> TIMELINES</h1>
+           <nav>
+              <ol class="breadcrumb">
+                 <li class="breadcrumb-item"><a routerLink="/">Home</a></li>
+                 <li class="breadcrumb-item">TIMESHEETS</li>
+                 <li class="breadcrumb-item active">TIMELINES</li>
+              </ol>
+           </nav>
+           <section>
+               <table>
+                   <thead>
+                     <tr>
+                       <th>timesheetID</th>
+                      
+                       <th>numeroTimesheet</th>
+                       <th>Date</th>
+                       <th>toltalH</th>
+                       <th>totalV</th>
+                       <th>collaborateur</th>
+                    
+                       <th>Validated</th>
+                      
+
+                      
+                     </tr>
+                   </thead>
+                   <tbody>
+                     <tr *ngFor="let t of validatedTimesheet">
+                       <td>{{t.id}}</td>
+                     
+                       <td>{{t.numTimesheet}}</td>
+                       <td>{{t.date}}</td>
+                       <td>{{t.totalH}}</td>
+                       <td>{{t.totalV}}</td>
+                       <td>{{t.collaborateur}}</td>
+                       
+                       <td>
+                           <i class="fas" [ngClass]="{'fa-check': t.validatedTimelines, 'fa-times': !t.validatedTimelines}"></i>
+                         </td>
+                       
+                      
+                      
+                    
+                        
+                     </tr>
+                     
+                     <!-- Ajoutez plus de lignes ici -->
+                   </tbody>
+                 </table>
+                 
+                 
+             </section>
+           
+        </div>
+           </div>
+</main> 
+

@@ -11,6 +11,7 @@ import { ToastrService } from 'ngx-toastr';
 export class MattersComponent implements OnInit {
   form!:FormGroup;
   client: any[] = [];
+  isManager=false;
    
   constructor(private formbuilder:FormBuilder,private http:HttpClient,private toastr: ToastrService) { }
 
@@ -32,6 +33,7 @@ export class MattersComponent implements OnInit {
         Device:'',
         TVA:'', 
         Status:''
+       
 
 
 

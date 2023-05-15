@@ -7,19 +7,14 @@
            </div>
            <div class="card-body" style="padding-top: 30px;">
            <form [formGroup]="form" (submit)="submit()">
-              <div class="row mb-3">
-                 <div class="col">
-                <label for="inputText" class="form-label">timeLinesID</label>
-                <select class="form-select input-rond" style="width: 100%;" formControlName="timelineId"
-                ><option  *ngFor="let option of Timeline " [value]="option.timeLinesID">{{ option.timeLinesID }} </option>
-                  
-               </select>
+             
+                
                  <div class="col">
                  <label for="inputText" class=" form-label">numTimesheet</label>
                  <input type="text" class="form-control input-rond" style="width: 100%;" formControlName="numTimesheet">
                  </div>
-              </div>
-              </div>
+           
+            
               <div class="row mb-3">
                  <div class="col">
                  <label for="inputText" class="form-label">date</label>
@@ -52,7 +47,7 @@
               </div>
               
               <button type="submit" class="btn btn-primary me-2">Enregistrer</button>
-                         <button type="button" class="btn btn-secondary">Annuler</button>
+                         <button type="reset"  class="btn btn-secondary">Annuler</button>
            </form>
            </div>  
         </div>

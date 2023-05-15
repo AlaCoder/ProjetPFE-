@@ -2,6 +2,7 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
 import { Route, Router } from '@angular/router';
+import { ToastrService } from 'ngx-toastr';
 
 @Component({
   selector: 'app-login',
@@ -10,9 +11,10 @@ import { Route, Router } from '@angular/router';
 })
 export class LoginComponent implements OnInit {
   form!:FormGroup;
+ 
   
 
-  constructor(private formbuilder:FormBuilder,private http:HttpClient ,private router:Router ) {
+  constructor(private formbuilder:FormBuilder,private http:HttpClient ,private router:Router,private toastr: ToastrService) {
 
    }
 
@@ -41,9 +43,14 @@ export class LoginComponent implements OnInit {
       {
         this.router.navigate(['/dashboard'])});
       console.log(res);
-    } catch (error) {
-      console.error(error);
-    }
+      this.toastr.success('login successfully!', 'Success');
+} catch (error) {
+  console.error(error);
+
+  // Show an error notification
+  this.toastr.error('Failed .', 'Error');
+}
+   
   }
 
 }

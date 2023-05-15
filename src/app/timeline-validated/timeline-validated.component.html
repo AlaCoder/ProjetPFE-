@@ -1,8 +1,6 @@
 <main id="main" class="main">
+  
     
-        
-          
-   
      <div class="part2">
         <div class="pagetitle">
             <h1> TIMELINES</h1>
@@ -26,15 +24,14 @@
                         <th>dure</th>
                         <th>taux</th>
                         <th>description</th>
-                        <th>Supprimer</th>
-                        <th>Modifier</th>
-                        <th>Valider</th>
+                        <th>Validated</th>
+                       
 
                        
                       </tr>
                     </thead>
                     <tbody>
-                      <tr *ngFor="let t of timeline">
+                      <tr *ngFor="let t of   validatedTimelines">
                         <td>{{t.timeLinesID}}</td>
                       
                         <td>{{t.timesheetID}}</td>
@@ -44,17 +41,14 @@
                         <td>{{t.dure}}</td>
                         <td>{{t.taux}}</td>
                         <td>{{t.description}}</td>
-                       
                         <td>
-                            <button (click)="deleteTimeline(t.timeLinesID)">Supprimer</button>
+                            <i class="fas" [ngClass]="{'fa-check': t.validatedTimelines, 'fa-times': !t.validatedTimelines}"></i>
                           </td>
-                          <td>
-                            <button (click)="edittimeline(t.timeLinesID)" >Modifier</button>
-                          </td>
+                        
+                       
+                       
                      
-                          <td>
-                            <button *ngIf="!t.valider" (click)="validerTimeline(t.timeLinesID)">Valider</button>
-                          </td>
+                         
                       </tr>
                       
                       <!-- Ajoutez plus de lignes ici -->
@@ -63,10 +57,7 @@
                   
                   
               </section>
-            <div class="aj" *ngIf="isManager" >
-                <button (click)="Open()" type="submit"  class="btn btn-primary me-2">Aouter un nouveau timeline</button>
-
-            </div>
+            
          </div>
             </div>
 </main> 

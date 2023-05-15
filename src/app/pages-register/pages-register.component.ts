@@ -2,6 +2,7 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
 import { Router } from '@angular/router';
+import { ToastrService } from 'ngx-toastr';
 
 @Component({
   selector: 'app-pages-register',
@@ -11,7 +12,7 @@ import { Router } from '@angular/router';
 export class PagesRegisterComponent implements OnInit {
 form!:FormGroup;
   router: any;
-  constructor(private formbuilder:FormBuilder,private http:HttpClient) {
+  constructor(private formbuilder:FormBuilder,private http:HttpClient,private toastr: ToastrService) {
 
    }
 

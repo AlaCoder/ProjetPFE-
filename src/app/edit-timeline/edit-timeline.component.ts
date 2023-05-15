@@ -2,6 +2,8 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
+import { ToastrService } from 'ngx-toastr';
+
 
 @Component({
   selector: 'app-edit-timeline',
@@ -16,7 +18,7 @@ export class EditTimelineComponent implements OnInit {
   constructor(private route: ActivatedRoute,
     private http: HttpClient,
     private router: Router,
-    private formbuilder: FormBuilder) { }
+    private formbuilder: FormBuilder,private toastr: ToastrService) { }
 
   ngOnInit(): void {
     this.form = this.formbuilder.group({
@@ -28,7 +30,7 @@ export class EditTimelineComponent implements OnInit {
       dure: [''],
       taux: [''],
       description: [''],
-      facturable : true
+      facturable : '',
       
      
       
@@ -44,10 +46,14 @@ export class EditTimelineComponent implements OnInit {
     console.log(this.form.value)
     console.log(this.timeLinesID)
     this.http.put(`http://localhost:5093/api/TimeLinesControllers/${this.timeLinesID}`, this.form.value).subscribe((response: any) => {
+      this.toastr.success('Timeline updated successfully!', 'Success');
       this.router.navigate(['/time-line']);
+      
     }, error => {
       this.errorMessage = error.message;
+      this.toastr.error('Failed to update timeline.', 'Error');
     });
+    
  
   }
 

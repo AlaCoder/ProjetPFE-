@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
-import { Emitters } from '../emitters/emitters';
+import { Emitters } from '../emitters/Emitters';
 
 @Component({
   selector: 'app-profil',
@@ -27,9 +27,11 @@ export class ProfilComponent implements OnInit {
         this.Username=result.userName
         this.email=result.email
         this.phone=result.phoneNumber
+        
       }
     } catch (err) {
       console.error(err);
     }
+    
 }
 }

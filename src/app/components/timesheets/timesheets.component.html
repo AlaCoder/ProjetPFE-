@@ -12,14 +12,14 @@
      
      <section>
       <div class="aj" >
-        <button (click)="Open()" type="submit"  class="btn btn-primary me-2">Aouter un nouveau timesheet</button>
+        <button (click)="Open()" type="submit"  class="btn btn-primary me-2" *ngIf="!isManager">Aouter un nouveau timesheet</button>
 
     </div>
         <table>
             <thead>
               <tr>
                 <th>Id</th>
-                <th>timeLinesID</th>
+              
                 <th>numeroTimesheet</th>
                 <th>Date</th>
                 <th>totalH</th>
@@ -33,7 +33,7 @@
             <tbody>
               <tr *ngFor="let t of timesheet">
                 <td>{{t.id}}</td>
-                <td>{{t.timeLinesID}}</td>
+               
                 <td>{{t.numTimesheet}}</td>
                 <td>{{t.date}}</td>
                 <td>{{t.totalH}}</td>
@@ -43,7 +43,7 @@
                   <button (click)="deleteTimesheet(t.id)">Supprimer</button>
                 </td>
                 <td>
-                  <button (click)="editClient(timesheet)" >Modifier</button>
+                  <button (click)="editClient(t.id)" >Modifier</button>
                 </td>
                
               </tr>
