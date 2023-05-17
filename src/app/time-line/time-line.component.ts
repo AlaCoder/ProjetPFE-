@@ -72,8 +72,11 @@ deleteTimeline(timeLinesID: number) {
           console.error(error);
           // Gérez l'erreur de manière appropriée, par exemple, affichez un message d'erreur à l'utilisateur.
         }
+        
       );
+      
     }
+    
   }
   
   

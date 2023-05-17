@@ -1,0 +1,22 @@
+.btn-custom {
+    background-color: #4caf50; /* Couleur de fond */
+    color: #fff; /* Couleur du texte */
+    border: none; /* Supprimer la bordure */
+    padding: 10px 20px; /* Espacement interne */
+    border-radius: 5px; /* Coins arrondis */
+    transition: background-color 0.3s ease; /* Transition au survol */
+  }
+  
+  .btn-custom:hover {
+    background-color: #45a049; /* Couleur de fond au survol */
+  }
+  
+  .btn-custom span {
+    margin-right: 5px; /* Marge à droite du texte */
+  }
+  
+  .btn-custom svg {
+    fill: currentColor; /* Utiliser la couleur actuelle pour l'icône */
+    margin-left: 5px; /* Marge à gauche de l'icône */
+  }
+  

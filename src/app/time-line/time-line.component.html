@@ -44,7 +44,7 @@
                         <td>{{t.dure}}</td>
                         <td>{{t.taux}}</td>
                         <td>{{t.description}}</td>
-                       
+                        
                         <td>
                             <button (click)="deleteTimeline(t.timeLinesID)">Supprimer</button>
                           </td>
@@ -63,7 +63,7 @@
                   
                   
               </section>
-            <div class="aj" *ngIf="isManager" >
+            <div class="aj" *ngIf="!isManager" >
                 <button (click)="Open()" type="submit"  class="btn btn-primary me-2">Aouter un nouveau timeline</button>
 
             </div>

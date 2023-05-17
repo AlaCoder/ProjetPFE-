@@ -92,6 +92,27 @@
       margin-top: 10px;
     }
   }
+  .btn-delete {
+    background-color: transparent; /* Couleur de fond transparente */
+    border: none; /* Supprimer la bordure */
+    padding: 0; /* Supprimer le padding */
+    cursor: pointer; /* Curseur en forme de main */
+    transition: color 0.3s ease; /* Transition de couleur */
+  }
+  
+  .btn-delete:hover {
+    color: #ff0000; /* Couleur du texte au survol */
+  }
+  
+  .btn-text {
+    margin-right: 5px; /* Marge à droite du texte */
+  }
+  
+  .btn-delete svg {
+    fill: currentColor; /* Utiliser la couleur actuelle pour l'icône */
+    vertical-align: middle; /* Alignement vertical au milieu */
+  }
+  
   
   
   

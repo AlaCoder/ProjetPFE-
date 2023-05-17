@@ -25,6 +25,7 @@ export class TimelineValidatedComponent implements OnInit {
         console.error(error);
       }
     );
+    
   }
   
 

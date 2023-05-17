@@ -14,7 +14,7 @@
   
   button[type=submit], button[type=button] {
     
-    background-color: #af854d;
+    background-color: #5e6cbf;
     color: white;
     padding: 10px 15px;
     border: none;
@@ -25,7 +25,7 @@
   }
   
   button[type=submit]:hover, button[type=button]:hover {
-    background-color: #a1681ea9;
+    background-color: #5e6cbf;
   }
   table {
     font-family: Arial, sans-serif;
@@ -43,7 +43,7 @@
   }
   
   th {
-    background-color: #8d6314;
+    background-color: #5e6cbf;
     color: #fff;
     text-transform: uppercase;
   }

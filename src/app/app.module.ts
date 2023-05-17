@@ -43,6 +43,11 @@ import { EditTimesheetComponent } from './edit-timesheet/edit-timesheet.componen
 import { AddUserComponent } from './add-user/add-user.component';
 import { TimelineValidatedComponent } from './timeline-validated/timeline-validated.component';
 import { TimesheetValidatedComponent } from './timesheet-validated/timesheet-validated.component';
+import { CalendrierComponent } from './calendrier/calendrier.component';
+import { FullCalendarModule } from '@fullcalendar/angular';
+
+//import { ScheduleModule, RecurrenceEditorModule,DayService,WeekService,WorkWeek,WorkWeekService,MonthService,MonthAgendaService } from '@syncfusion/ej2-angular-schedule';
+
 
 
 @NgModule({
@@ -80,6 +85,10 @@ import { TimesheetValidatedComponent } from './timesheet-validated/timesheet-val
                   AddUserComponent,
                   TimelineValidatedComponent,
                   TimesheetValidatedComponent,
+                  CalendrierComponent,
+                 
+                 
+                  
     
     
   ],
@@ -93,10 +102,16 @@ import { TimesheetValidatedComponent } from './timesheet-validated/timesheet-val
     DxSchedulerModule,
     ReactiveFormsModule,
     HttpClientModule,
-    ToastrModule.forRoot(), 
+ 
+ 
+    ToastrModule.forRoot(),
+    FullCalendarModule 
+
+    // ScheduleModule, RecurrenceEditorModule, 
+    
     
   ],
-  providers: [],
+ //providers: [DayService,WeekService,WorkWeek,WorkWeekService,MonthService,MonthAgendaService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

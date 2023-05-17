@@ -25,6 +25,7 @@ import { EditTimesheetComponent } from './edit-timesheet/edit-timesheet.componen
 import { AddUserComponent } from './add-user/add-user.component';
 import { TimelineValidatedComponent } from './timeline-validated/timeline-validated.component';
 import { TimesheetValidatedComponent } from './timesheet-validated/timesheet-validated.component';
+import { CalendrierComponent } from './calendrier/calendrier.component';
 
 
 const routes: Routes = [
@@ -53,7 +54,8 @@ const routes: Routes = [
   {path:'edit-timesheet/:id',component:EditTimesheetComponent},
   {path:'add-user',component:AddUserComponent},
   {path:'timeline-validated',component:TimelineValidatedComponent},
-  {path:'timesheet-validated',component:TimesheetValidatedComponent}
+  {path:'timesheet-validated',component:TimesheetValidatedComponent},
+  {path:'calendrier',component:CalendrierComponent}
 ];
 
 @NgModule({

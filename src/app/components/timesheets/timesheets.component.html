@@ -40,7 +40,10 @@
                 <td>{{t.totalV}}</td>
                 <td>{{t.collaborateur}}</td>
                 <td>
-                  <button (click)="deleteTimesheet(t.id)">Supprimer</button>
+                  <button class="btn-delete" (click)="deleteTimesheet(t.id)"><span class="btn-text">Supprimer</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-trash" viewBox="0 0 16 16">
+                      <path d="M0 2.5a.5.5 0 0 1 .5-.5h15a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1v10a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V4h-1a.5.5 0 0 1-.5-.5v-1zm3.5-.5a.5.5 0 0 0-.5.5v1h10v-1a.5.5 0 0 0-.5-.5h-10zM2 4v10a1 1 0 0 0 1 1h9a1 1 0 0 0 1-1V4H2z"/>
+                    </svg></button>
                 </td>
                 <td>
                   <button (click)="editClient(t.id)" >Modifier</button>
