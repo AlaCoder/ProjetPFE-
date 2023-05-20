@@ -13,11 +13,14 @@ import { NvTimesheetComponent } from 'src/app/nv-timesheet/nv-timesheet.componen
 export class TimesheetsComponent implements OnInit {
  
   timesheet: any[]= [];
+
   isManager=false;
+
 
   constructor( private http: HttpClient,private router: Router ,private matdialog : MatDialog) { }
 
   ngOnInit(): void {
+    
     this.http.get('http://localhost:5093/api/Timesheet').subscribe((response: any) => {
       this.timesheet = response;
       console.log(this.timesheet);

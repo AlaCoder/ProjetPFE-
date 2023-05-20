@@ -16,6 +16,7 @@ export class HeaderComponent implements OnInit {
 authenticated =false;
 isManager=false;
 name =""
+role =""
   constructor(@Inject(DOCUMENT) private document: Document,private http:HttpClient ,private router:Router,private cookieService: CookieService,private user : UserService,private test:Test) {
     Emitters.authEmitter.subscribe(
       (auth:boolean)=>{

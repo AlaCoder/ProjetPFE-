@@ -9,14 +9,13 @@
            <form [formGroup]="form" (submit)="submit()">
               <div class="row mb-3">
                  <div class="col">
-                <label for="inputText" class="form-label">User</label>
-                <select class="form-select input-rond" style="width: 100%;" formControlName="UserID"
-                ><option  *ngFor="let option of User" [value]="option.id">{{ option.userName }}</option>
-                  
-               </select>
+                <label for="inputText" class="form-label">Client Name</label>
+                <select class="form-select input-rond" style="width: 100%;" formControlName="clientID" > 
+                  <option  *ngFor="let option of client" [value]="option.clientID" >{{ option.nameClient}}</option ></select>
                  <div class="col">
                  <label for="inputText" class=" form-label">Entité</label>
-                 <input type="text" class="form-control input-rond" style="width: 100%;" formControlName="entite">
+                 <select class="form-select input-rond" style="width: 100%;" formControlName="entite" > 
+                  <option  *ngFor="let option of client" [value]="option.nomEntite">{{ option.nomEntite}}</option ></select>
                  </div>
               </div>
               <div class="row mb-3">
@@ -38,7 +37,8 @@
               <div class="row mb-3">
                  <div class="col">
                  <label for="inputText" class=" form-label">Manager </label>
-                 <input type="text" class="form-control input-rond" style="width:400px"  placeholder="Manager" formControlName="manager"> 
+                 <select class="form-select input-rond" style="width: 100%;" formControlName="userID" > 
+                  <option  *ngFor="let option of manager" [value]="option.id" >{{ option.userName}}</option ></select>
                         </div>
                         <div class="col">
                         <label for="inputText" class="form-label">durée</label>
@@ -61,8 +61,8 @@
                              <label class="form-check-label" for="facturable">Cochez cette case si le produit est facturable</label>
                            </div>
                          </div>
-                       
-                        
+                         
+
                          
               </div>
               

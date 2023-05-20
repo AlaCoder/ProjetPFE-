@@ -22,9 +22,9 @@
                        <th>toltalH</th>
                        <th>totalV</th>
                        <th>collaborateur</th>
-                    
-                       <th>Validated</th>
-                      
+                       <th>gener facture</th>
+                       <th>Imprimer facture</th>
+                        
                       
 
                       
@@ -39,12 +39,14 @@
                        <td>{{t.totalH}}</td>
                        <td>{{t.totalV}}</td>
                        <td>{{t.collaborateur}}</td>
-
-                       
                        <td>
-                           <i class="fas" [ngClass]="{'fa-check': t.validatedTimelines, 'fa-times': !t.validatedTimelines}"></i>
-                         </td>
-                       
+                       <button (click)="generateInvoice(t.id)">Générer la facture</button>
+                    </td>
+
+                    <td>
+                       <button (click)="downloadInvoicePdf(t.id)">Télécharger la facture PDF</button>  
+                    </td>
+                     
                       
                       
                     

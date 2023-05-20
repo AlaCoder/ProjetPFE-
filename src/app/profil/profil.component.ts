@@ -11,6 +11,7 @@ export class ProfilComponent implements OnInit {
    Username=''
    email=''
    phone=''
+   role=''
   constructor(private http:HttpClient) { }
 
   async ngOnInit():  Promise<void>  {
@@ -27,11 +28,33 @@ export class ProfilComponent implements OnInit {
         this.Username=result.userName
         this.email=result.email
         this.phone=result.phoneNumber
+        var id = result.id;
+        const url = `http://localhost:5093/api/User/${id}/roles`;
+
+        try {
+          const response = await fetch(url, {
+            method: 'GET',
+            headers: {}
+          });
         
+          if (response.ok) {
+            const result = await response.json();
+            console.log(result[0]);
+            this.role=result[0]
+            
+            
+
+          }
+        } catch (err) {
+          console.error(err);
+        }
       }
+      
     } catch (err) {
       console.error(err);
     }
     
+    
 }
+
 }

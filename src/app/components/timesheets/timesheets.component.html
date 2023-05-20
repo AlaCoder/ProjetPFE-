@@ -11,10 +11,7 @@
      </div>
      
      <section>
-      <div class="aj" >
-        <button (click)="Open()" type="submit"  class="btn btn-primary me-2" *ngIf="!isManager">Aouter un nouveau timesheet</button>
-
-    </div>
+     
         <table>
             <thead>
               <tr>
@@ -24,7 +21,8 @@
                 <th>Date</th>
                 <th>totalH</th>
                 <th>totalV</th>
-                <th>collaborateur</th>
+                <th>Manager</th>
+               
                 <th>Supprimer</th>
                 <th>Modifier</th>
                
@@ -39,6 +37,7 @@
                 <td>{{t.totalH}}</td>
                 <td>{{t.totalV}}</td>
                 <td>{{t.collaborateur}}</td>
+               
                 <td>
                   <button class="btn-delete" (click)="deleteTimesheet(t.id)"><span class="btn-text">Supprimer</span>
                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-trash" viewBox="0 0 16 16">
@@ -55,7 +54,10 @@
             </tbody>
           </table>
           
-          
+          <div class="aj" >
+            <button (click)="Open()" type="submit"  class="btn btn-primary me-2" *ngIf="!isManager">Aouter un nouveau timesheet</button>
+    
+        </div>
       </section>
     
 </main>      

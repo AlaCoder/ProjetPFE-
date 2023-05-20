@@ -22,7 +22,8 @@ export class ClientsComponent implements OnInit {
         
         numeroClient:'',
         ClientName:'',
-        Description:''
+        Description:'',
+        nomEntite:''
      
       }
     );

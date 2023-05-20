@@ -12,10 +12,11 @@ export class MattersComponent implements OnInit {
   form!:FormGroup;
   client: any[] = [];
   isManager=false;
-   
+  
   constructor(private formbuilder:FormBuilder,private http:HttpClient,private toastr: ToastrService) { }
 
   ngOnInit(): void {
+    
     this.http.get<any[]>('http://localhost:5093/api/Client')
   .subscribe((response) => {
     this.client = response;
@@ -23,6 +24,7 @@ export class MattersComponent implements OnInit {
     this.form = this.formbuilder.group(
 
       {
+
         
         DatedeDémarrage:'',
         DatedeFin:'',
@@ -32,7 +34,8 @@ export class MattersComponent implements OnInit {
         Montant:'',
         Device:'',
         TVA:'', 
-        Status:''
+        Status:'',
+        clientID:''
        
 
 

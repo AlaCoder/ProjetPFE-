@@ -45,6 +45,7 @@ import { TimelineValidatedComponent } from './timeline-validated/timeline-valida
 import { TimesheetValidatedComponent } from './timesheet-validated/timesheet-validated.component';
 import { CalendrierComponent } from './calendrier/calendrier.component';
 import { FullCalendarModule } from '@fullcalendar/angular';
+import { ListUsersComponent } from './list-users/list-users.component';
 
 //import { ScheduleModule, RecurrenceEditorModule,DayService,WeekService,WorkWeek,WorkWeekService,MonthService,MonthAgendaService } from '@syncfusion/ej2-angular-schedule';
 
@@ -86,6 +87,7 @@ import { FullCalendarModule } from '@fullcalendar/angular';
                   TimelineValidatedComponent,
                   TimesheetValidatedComponent,
                   CalendrierComponent,
+                  ListUsersComponent,
                  
                  
                   

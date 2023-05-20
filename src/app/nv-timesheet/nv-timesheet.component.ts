@@ -11,6 +11,8 @@ import { ToastrService } from 'ngx-toastr';
 export class NvTimesheetComponent implements OnInit {
   form!:FormGroup;
   Timeline: any[] = [];
+  manager:any[]=[];
+  collabarateur:any[]=[];
 
   constructor(private formbuilder:FormBuilder,private http:HttpClient,private toastr: ToastrService) { }
 
@@ -20,6 +22,14 @@ export class NvTimesheetComponent implements OnInit {
     this.Timeline = response;
 
   });
+  this.http.get<any[]>('http://localhost:5093/api/User/managers')
+    .subscribe((response) => {
+      this.manager = response;
+    });
+    this.http.get<any[]>('http://localhost:5093/api/User/collaborateurs')
+    .subscribe((response) => {
+      this.collabarateur = response;
+    });
   this.form = this.formbuilder.group(
 
     {
@@ -30,6 +40,7 @@ export class NvTimesheetComponent implements OnInit {
       totalV:'',
       collaborateur:'',
       manager:'',
+      
     
       
      

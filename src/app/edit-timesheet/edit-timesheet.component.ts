@@ -14,12 +14,23 @@ export class EditTimesheetComponent implements OnInit {
   timesheet: any = {};
   errorMessage !: string;
   form: any;
+  manager:any[]=[];
+  collabarateur:any[]=[];
   constructor(private route: ActivatedRoute,
     private http: HttpClient,
     private router: Router,
     private formbuilder: FormBuilder,private toastr: ToastrService ) { }
 
   ngOnInit(): void {
+    this.http.get<any[]>('http://localhost:5093/api/User/managers')
+    .subscribe((response) => {
+      this.manager = response;
+    });
+    this.http.get<any[]>('http://localhost:5093/api/User/collaborateurs')
+    .subscribe((response) => {
+      this.collabarateur = response;
+    });
+
     this.form = this.formbuilder.group({
       timelineId: [''],
       numTimesheet: [''],

@@ -35,12 +35,14 @@
               <div class="row mb-3">
                  <div class="col">
                  <label for="inputText" class=" form-label">collaborateur</label>
-                 <input type="text" class="form-control input-rond" style="width:400px"  placeholder="0" formControlName="collaborateur">        
+                 <select class="form-select input-rond" style="width: 100%;" formControlName="collaborateur" > 
+                  <option  *ngFor="let option of   collabarateur" [value]="option.userName" >{{ option.userName}}</option ></select>        
                         </div>
                        
                         <div class="col">
                         <label for="inputText" class="form-label">manager</label>
-                        <input type="text" class="form-control input-rond" style="width:400px"  placeholder="Device" formControlName="manager"> 
+                         <select class="form-select input-rond" style="width: 100%;" formControlName="manager" > 
+              <option  *ngFor="let option of manager" [value]="option.id" >{{ option.userName}}</option ></select>
                         </div>
                         
                          

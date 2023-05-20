@@ -59,24 +59,50 @@ deleteTimeline(timeLinesID: number) {
   
   
   }
-  validerTimeline(timeLinesID: number) {
+  async validerTimeline(timeLinesID: number) {
     if (confirm('Êtes-vous sûr de vouloir valider ce timeline ?')) {
       this.http.post(`http://localhost:5093/api/TimeLinesControllers/ValiderTimeline/${timeLinesID}`, null).subscribe(
-        (response: any) => {
+        async (response: any) => {
           // La timeline a été validée avec succès
           console.log(response);
+
           // Effectuez les actions supplémentaires nécessaires, par exemple, mettre à jour la liste des timelines validées.
+          try {
+            const response = await fetch("http://localhost:5093/api/Timesheet/ValiderTousLesTimesheets", {
+              method: 'POST',
+              headers: {},
+              body: JSON.stringify({})
+            });
+          
+            if (response.ok) {
+              const result = await response.json();
+              console.log(result);
+            }
+          } catch (err) {
+            console.error(err);
+          }
         },
         (error: any) => {
           // Une erreur s'est produite lors de la validation de la timeline
           console.error(error);
           // Gérez l'erreur de manière appropriée, par exemple, affichez un message d'erreur à l'utilisateur.
         }
-        
       );
-      
     }
+   /* try {
+      const response = await fetch("http://localhost:5093/api/Timesheet/ValiderTousLesTimesheets", {
+        method: 'POST',
+        headers: {},
+        body: JSON.stringify({})
+      });
     
+      if (response.ok) {
+        const result = await response.json();
+        console.log(result);
+      }
+    } catch (err) {
+      console.error(err);
+    }*/
   }
   
   

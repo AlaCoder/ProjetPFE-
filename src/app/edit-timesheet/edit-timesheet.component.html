@@ -26,11 +26,13 @@
           </div>
           <div class="form-group">
             <label for="prenom">collaborateur</label>
-            <input type="text" class="form-control" id="prenom" name="prenom"  formControlName="collaborateur" >
+            <select class="form-select input-rond" style="width: 100%;" formControlName="collaborateur" > 
+              <option  *ngFor="let option of   collabarateur" [value]="option.id" >{{ option.userName}}</option ></select>
           </div>
           <div class="form-group">
             <label for="prenom">manager</label>
-            <input type="text" class="form-control" id="prenom" name="prenom"  formControlName="manager" >
+            <select class="form-select input-rond" style="width: 100%;" formControlName="manager" > 
+              <option  *ngFor="let option of manager" [value]="option.id" >{{ option.userName}}</option ></select>
           </div>
 
           

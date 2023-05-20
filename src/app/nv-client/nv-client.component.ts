@@ -13,6 +13,10 @@ export class NvClientComponent implements OnInit {
   User: any[] = [];
   Matter: any[] = [];
   Libelle: any[] = [];
+  client:any[]=[];
+  manager:any[]=[];
+
+
   constructor(private formbuilder:FormBuilder,private http:HttpClient,private toastr: ToastrService) { }
 
   ngOnInit(): void {
@@ -26,14 +30,23 @@ export class NvClientComponent implements OnInit {
     for(var i of this.Matter){
       this.Libelle.push({"libelle":i.libellé,"id":i.matterID})
     }
+    this.http.get<any[]>('http://localhost:5093/api/Client')
+    .subscribe((response) => {
+      this.client = response;
+    });
+    this.http.get<any[]>('http://localhost:5093/api/User/managers')
+    .subscribe((response) => {
+      this.manager = response;
+    });
   });
   this.form = this.formbuilder.group(
 
     {
-      UserID:'',
+      
       matterID:'',
       entite:'',
       manager:'',
+      userID:'',
       dure:'',
       taux:'',
       description:'',
@@ -59,6 +72,10 @@ export class NvClientComponent implements OnInit {
       const headers = new HttpHeaders({
         'Content-Type': 'application/json'
       });
+      for( var l of this.manager){
+        if(l.id == data.userID)
+        data.manager=l.userName
+      }
       console.log( JSON.stringify(data))
       const res = await this.http.post('http://localhost:5093/api/TimeLinesControllers/TimeLines', JSON.stringify(data), { headers })
       .subscribe(
